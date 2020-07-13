@@ -1,0 +1,26 @@
+{
+  "name": "jixin",
+  "version": "1.0.0",
+  "description": "jixin",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager ./ jixin --platform=win32 --arch=x64 --app-version=1.0.0 --out=./jixin --electron-version=9.0.2 --icon=logo.ico --asar"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "orange",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.2"
+  },
+  "dependencies": {
+    "asar": "^3.0.3",
+    "electron-packager": "^14.2.1"
+  }
+}

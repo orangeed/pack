@@ -1,0 +1,513 @@
+2020-07-09 14:50:55	[34minfo[0m	logger/logger.go:106	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-09 14:50:55	[34minfo[0m	logger/logger.go:107	日志初始化成功
+2020-07-09 14:50:55	[34minfo[0m	logger/logger.go:108	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-09 14:50:55	[34minfo[0m	utils/setting.go:48	端口号	{"LocalPort": 13010}
+2020-07-09 14:50:55	[34minfo[0m	utils/setting.go:51	redis缓存	{"ENABLE": false}
+2020-07-09 14:50:55	[34minfo[0m	utils/setting.go:55	ukey编号	{"UkeySN": "123456abc"}
+2020-07-09 14:50:55	[34minfo[0m	utils/setting.go:57	配置初始化按完成 版本:2020-06-18 01
+2020-07-09 14:50:55	[34minfo[0m	utils/setting.go:58	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-09 14:50:55	[34minfo[0m	cache/cache.go:30	不启用redis
+2020-07-09 14:50:58	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:50:58	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/login/user opt:POST
+2020-07-09 14:50:58	[34minfo[0m	middleware/mw_recover.go:50	body:{"userName":"admin","password":"21232f297a57a5a743894a0e4a801fc3"}
+2020-07-09 14:50:58	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXVpZCI6IjkwMGY5YjZlLWZhNmUtNDc4YS1iYThjLWIyNGZhMTY1M2ViMyJ9.8ZNx60LuKEfOEWls2Z7cEmyTgcRyL5gnIvKApduTgm4"}}}
+2020-07-09 14:50:58	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:50:58	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:GET
+2020-07-09 14:50:58	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-09 14:50:58	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"isRegister":"1","ukey":"123456abc"}}}
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/unitInfo opt:GET
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:50:59	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-09 14:50:59	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-09 14:50:59	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unitName":"啊萨达萨达","unifiedSocialCreditCode":"626498749165498798","organizationCodeSuperiorCompetentUnit":"879849846546798798","superiorSupervisorName":"阿松大","unitType":"10","jobContact":"阿松大","jobPhoneNumber":"13145648791","administrativeAreaCode":"620000","openingModule1":"1","openingModule2":"1","openingModule3":"0","ukey":"123456abc","remark":""}}}
+2020-07-09 14:50:59	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}}
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-09 14:50:59	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-09 14:50:59	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"1","recordNum":"1","changeNum":"0","undoNum":"0","todayNum":"1"},"packageWaitingInfo":{"total":"0","todayNum":"1"},"electronicFileWaitingInfo":{"total":"1","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-09 14:51:04	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}, "status": 200}
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&direction=1 opt:GET
+2020-07-09 14:51:04	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-09 14:51:04	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-09 14:51:04	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"1","list":[{"id":"1","surname":"去","name":"去","cardID":"330222199901111222","residence":"去","sex":"男","politicalOutlook":"03","birthday":"2020-06-30","nation":"去","mobilePhone":"13111111111","nativePlace":"去","joinPartyDay":"2020-06-29","health":"去","domesticRelatives":"","abroadRelatives":"","professionalTitles":"01","professionalPost":"02","workUnit":"去","personnelManager":"去","workday":"2020-06-30","resume":"","reportType":"1","state":"5","passport":"0","exitEntryPermitForHKMacao":"0","exitEntryPermitForTW":"1","remarks":"","registryday":"2020-07-09"}]}}}
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-09 14:51:04	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalTitle opt:GET
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:04	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zjzc"}
+2020-07-09 14:51:04	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"部级正职，省级正职"},{"value":"02","label":"部级副职，省级副职"},{"value":"03","label":"司级正职，厅级正职，巡视员"},{"value":"04","label":"司级副职，厅级副职，助理巡视员"},{"value":"05","label":"处级正职，县级正职，调研员"},{"value":"06","label":"处级副职，县级副职，助理调研员"},{"value":"07","label":"科级正职，乡级正职，主任科员"},{"value":"08","label":"科级副职，乡级副职，副主任科员"},{"value":"09","label":"科员"},{"value":"10","label":"办事员"}]}}}
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:04	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&direction=1&state=1,2 opt:GET
+2020-07-09 14:51:04	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 AND ( zt = ? OR  zt = ?) order by ryid DESC  LIMIT ?, ?
+2020-07-09 14:51:04	[34minfo[0m	db/registries.go:135	args:	{"args2": ["1","2",0,10]}
+2020-07-09 14:51:04	[34minfo[0m	database/sqlTool.go:132	sql:, select count(*) as counts from d_baryxxb_t  WHERE sczt = 0 AND ( zt = ? OR  zt = ?)
+2020-07-09 14:51:04	[34minfo[0m	database/sqlTool.go:133	args:	{"args": ["1","2"]}
+2020-07-09 14:51:04	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","list":null}}}
+2020-07-09 14:51:05	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:05	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/package/list?pageNo=1&pageSize=10&direction=1&state=4,5 opt:GET
+2020-07-09 14:51:05	[34minfo[0m	db/package.go:119	sql:, SELECT baid,balx,zbh,zbrysl,zbr,dqzt,dzdalj,dzdacjsj,sbsj,cjsj,sczt FROM m_djba_t  WHERE sczt = 0 AND ( dqzt = ? OR  dqzt = ?) order by baid DESC  LIMIT ?, ?
+2020-07-09 14:51:05	[34minfo[0m	db/package.go:120	args2:	{"args2": ["4","5",0,10]}
+2020-07-09 14:51:05	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"1","list":[{"packageID":"10000","packageType":"1","personnelNumber":"1","packagePerson":"admin","packageTime":"2020-07-09 09:38:24","electronicTime":"2020-07-09 10:56:51","state":"5"}]}}}
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-09 14:51:06	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:06	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-09 14:51:06	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-09 14:51:06	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:06	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-09 14:51:06	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&selectValue=&direction=1 opt:GET
+2020-07-09 14:51:06	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-09 14:51:06	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-09 14:51:06	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"1","list":[{"id":"1","surname":"去","name":"去","cardID":"330222199901111222","residence":"去","sex":"男","politicalOutlook":"03","birthday":"2020-06-30","nation":"去","mobilePhone":"13111111111","nativePlace":"去","joinPartyDay":"2020-06-29","health":"去","domesticRelatives":"","abroadRelatives":"","professionalTitles":"01","professionalPost":"02","workUnit":"去","personnelManager":"去","workday":"2020-06-30","resume":"","reportType":"1","state":"5","passport":"0","exitEntryPermitForHKMacao":"0","exitEntryPermitForTW":"1","remarks":"","registryday":"2020-07-09"}]}}}
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&selectValue=&direction=1 opt:GET
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:06	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-09 14:51:06	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/whiteList?pageNo=1&pageSize=10&direction=1 opt:GET
+2020-07-09 14:51:06	[34minfo[0m	db/white_list.go:77	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t WHERE sczt = ? AND sfbmd = ? ORDER BY ryid DESC LIMIT ?, ?
+2020-07-09 14:51:06	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-09 14:51:06	[34minfo[0m	db/white_list.go:87	sql:, SELECT count(1) AS count FROM d_baryxxb_t WHERE sczt = 0 AND sfbmd = 1
+2020-07-09 14:51:06	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"1","list":[{"id":"1","surname":"去","name":"去","cardID":"330222199901111222","residence":"去","sex":"男","politicalOutlook":"03","birthday":"2020-06-30","nation":"去","mobilePhone":"13111111111","nativePlace":"去","joinPartyDay":"2020-06-29","health":"去","domesticRelatives":"","abroadRelatives":"","professionalTitles":"01","professionalPost":"02","workUnit":"去","personnelManager":"去","workday":"2020-06-30","resume":"","reportType":"1","state":"5","passport":"0","exitEntryPermitForHKMacao":"0","exitEntryPermitForTW":"1","remarks":"","registryday":"2020-07-09"}]}}}
+2020-07-09 14:51:06	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","whiteList":null}}}
+2020-07-09 14:51:09	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:09	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:09	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-09 14:51:09	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-09 14:51:09	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}}
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-09 14:51:09	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-09 14:51:09	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"1","recordNum":"1","changeNum":"0","undoNum":"0","todayNum":"1"},"packageWaitingInfo":{"total":"0","todayNum":"1"},"electronicFileWaitingInfo":{"total":"1","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}, "status": 200}
+2020-07-09 14:51:12	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:12	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-09 14:51:12	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-09 14:51:12	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-09 14:51:12	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-09 14:51:12	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:12	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/application/record/list?state=4,5&direction=1&pageNo=1&pageSize=10 opt:GET
+2020-07-09 14:51:12	[34minfo[0m	application/application_record.go:48	[4 5]
+2020-07-09 14:51:12	[34minfo[0m	db/application.go:104	sql:, 
+SELECT r.djbh     AS orderNo,                      -- 单据编号
+       r.ryid     AS personID,                     -- 人员ID
+       r.dqzt     AS state,                        -- 状态,0新增，1已编辑，3已打印，4已采集，5已提交，6被驳回，7成功
+       r.dbrxm    AS attorneys,                    -- 代办人
+       r.dbrsjh   AS attorneysPhone,               -- 代办人手机号
+       r.cgjsy    AS abroadReason,                 -- 出国事由
+       r.cgjmdd   AS destination,                  -- 前往国家，目的地
+       r.cgjsj    AS toAbroadTime,                 -- 出国时间
+       r.tlsj     AS residenceTime,                -- 停留时间(天)
+       r.txry     AS accompanier,                  -- 同行人员
+       r.sccgjmdd AS lastTimeToAbroad,             -- 上次因私出国地点
+       r.sccgjsj  AS lastTimeToAbroadTime,         -- 上次因私出国时间
+       r.xlzj     AS credentials,                  -- 领用证件：0，护照，1港澳台香港签注，2港澳台澳门签注，3台湾及签注
+       r.bz       AS attach,                       -- 备注信息
+       p.baryx    AS surname,                      -- 姓
+       p.barym    AS name,                         -- 名
+       p.sfzhm    AS cardID,                       -- 身份证号码
+       p.sjhm     AS myPhone,                      -- 本人手机号码
+       p.xb       AS sex,                          -- 性别：0女，1男，2未知
+       p.csrq     AS birthDay,                     -- 出生日期
+       p.jkzk     AS health,                       -- 健康状态
+       p.hkszd    AS registeredPermanentResidence, -- 户口所在地
+       p.gzsj     AS workTime,                     -- 工作时间
+       p.zw       AS position,                     -- 职务
+       p.gzjl     AS resume,                       -- 工作简历
+       p.zzmm     AS politicalOutlook,             -- 政治面貌：传回序号，前端自动转换成中文
+       p.mz       AS nation,                       -- 民族：传回序号，前端自动转换成中文
+       p.jg       AS nativePlace,                  -- 籍贯
+       p.rdsj     AS joinPartyDay                  -- 入党时间
+FROM m_cgjsp_t AS r
+         LEFT JOIN d_baryxxb_t AS p ON r.ryid = p.ryid WHERE r.dqzt IN (?, ?) AND r.sczt = ? ORDER BY r.spbid DESC LIMIT ?, ?
+2020-07-09 14:51:12	[34minfo[0m	db/application.go:105	args:	{"args": [4,5,0,0,10]}
+2020-07-09 14:51:12	[34minfo[0m	db/application.go:166	sql:, SELECT COUNT(1) AS count
+FROM m_cgjsp_t AS r
+         LEFT JOIN d_baryxxb_t AS p ON r.ryid = p.ryid WHERE r.dqzt IN (?, ?) AND r.sczt = ?
+2020-07-09 14:51:12	[34minfo[0m	db/application.go:167	args:	{"args": [4,5,0]}
+2020-07-09 14:51:12	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"1","data":[{"orderNo":"10000","personID":"1","state":"5","surname":"去","name":"去","cardID":"330222199901111222","myPhone":"13111111111","sex":"男","birthday":"2020-06-30","health":"去","residence":"去","workTime":"2020-06-30","professionalPost":"02","resume":"","politicalOutlook":"03","nation":"去","nativePlace":"去","joinPartyDay":"2020-06-29","attorneys":"去","attorneysPhone":"13111111111","abroadReason":"11","destination":"去","toAbroadTime":"2020-07-28","residenceTime":"11","accompanier":"去","lastTimeToAbroad":"去","lastTimeToAbroadTime":"2020-06-30","credentials":"3","attach":"去"}]}}}
+2020-07-09 14:51:13	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:13	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/application/electronic/info?orderNo=10000 opt:GET
+2020-07-09 14:51:13	[34minfo[0m	db/application.go:180	sql:, SELECT spbid,djbh,dqzt,ryid,xlzj,cgjmdd,cgjsj,tlsj,cgjsy,txry,dzdacjsj,sbsj,dzdalj,sccgjmdd,sccgjsj,dbrxm,dbrsjh,bz,cjsj,xgsj,sczt FROM m_cgjsp_t WHERE djbh = ? AND sczt = ?
+2020-07-09 14:51:13	[34minfo[0m	db/application.go:181	args:	{"orderNo": "10000"}
+2020-07-09 14:51:13	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"image":"3_10000_1594263499.pdf"}}}
+2020-07-09 14:51:42	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-09 14:51:42	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/application/electronic/info?orderNo=10000 opt:GET
+2020-07-09 14:51:42	[34minfo[0m	db/application.go:180	sql:, SELECT spbid,djbh,dqzt,ryid,xlzj,cgjmdd,cgjsj,tlsj,cgjsy,txry,dzdacjsj,sbsj,dzdalj,sccgjmdd,sccgjsj,dbrxm,dbrsjh,bz,cjsj,xgsj,sczt FROM m_cgjsp_t WHERE djbh = ? AND sczt = ?
+2020-07-09 14:51:42	[34minfo[0m	db/application.go:181	args:	{"orderNo": "10000"}
+2020-07-09 14:51:42	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"image":"3_10000_1594263499.pdf"}}}
+2020-07-13 13:39:47	[34minfo[0m	logger/logger.go:106	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:39:47	[34minfo[0m	logger/logger.go:107	日志初始化成功
+2020-07-13 13:39:47	[34minfo[0m	logger/logger.go:108	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:39:47	[34minfo[0m	utils/setting.go:48	端口号	{"LocalPort": 13010}
+2020-07-13 13:39:47	[34minfo[0m	utils/setting.go:51	redis缓存	{"ENABLE": false}
+2020-07-13 13:39:47	[34minfo[0m	utils/setting.go:55	ukey编号	{"UkeySN": "123456abc"}
+2020-07-13 13:39:47	[34minfo[0m	utils/setting.go:57	配置初始化按完成 版本:2020-06-18 01
+2020-07-13 13:39:47	[34minfo[0m	utils/setting.go:58	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:39:47	[34minfo[0m	cache/cache.go:30	不启用redis
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/login/user opt:POST
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:50	body:{"userName":"admin","password":"21232f297a57a5a743894a0e4a801fc3"}
+2020-07-13 13:39:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXVpZCI6IjAxYmQwNWQyLTdlMWItNDk1MS1hNjhhLThkNzM2YTQxMDAxNiJ9.Oc0FFt4H4Wr1sVKsnZyXAuJMvn1nGA1-9UhCvQWUIZk"}}}
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:GET
+2020-07-13 13:39:54	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:39:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"isRegister":"0","ukey":"123456abc"}}}
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:39:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/unitType opt:GET
+2020-07-13 13:39:54	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:39:54	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "dwlx"}
+2020-07-13 13:39:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"10","label":"党政机关"},{"value":"20","label":"金融系统"},{"value":"30","label":"教科文卫系统"},{"value":"40","label":"国有大中型企业单位"},{"value":"90","label":"其他单位"}]}}}
+2020-07-13 13:40:43	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:40:43	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:POST
+2020-07-13 13:40:43	[34minfo[0m	middleware/mw_recover.go:50	body:{"ukey":"123456abc","unitName":"烦烦烦","unifiedSocialCreditCode":"131549874984916513","organizationCodeSuperiorCompetentUnit":"165498798465979879","superiorSupervisorName":"胜多负少","unitType":"20","jobContact":"大师傅士大夫","jobPhoneNumber":"13111111111","administrativeAreaCode":"620000","selectList":["1","2"],"openingModule1":"1","openingModule2":"1","openingModule3":"0"}
+2020-07-13 13:40:43	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:40:43	[34minfo[0m	db/unit.go:39	sql:, INSERT INTO m_dwxx_t(dwmc, tyshxydm, sjzgdwzzjgdm, sjzgdwmc, dwlx, gzlxr, gzlxdh, xzqybm, ktmk1, ktmk2, ktmk3, ukeybh, bz, dlmm, ukeymw)
+values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-07-13 13:40:43	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success"}}
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/unitInfo opt:GET
+2020-07-13 13:40:45	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:40:45	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unitName":"烦烦烦","unifiedSocialCreditCode":"131549874984916513","organizationCodeSuperiorCompetentUnit":"165498798465979879","superiorSupervisorName":"胜多负少","unitType":"20","jobContact":"大师傅士大夫","jobPhoneNumber":"13111111111","administrativeAreaCode":"620000","openingModule1":"1","openingModule2":"1","openingModule3":"0","ukey":"123456abc","remark":""}}}
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-13 13:40:45	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-13 13:40:45	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}}
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-13 13:40:45	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-13 13:40:45	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"0","recordNum":"0","changeNum":"0","undoNum":"0","todayNum":"0"},"packageWaitingInfo":{"total":"0","todayNum":"0"},"electronicFileWaitingInfo":{"total":"0","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
+2020-07-13 13:55:42	[34minfo[0m	logger/logger.go:106	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:55:42	[34minfo[0m	logger/logger.go:107	日志初始化成功
+2020-07-13 13:55:42	[34minfo[0m	logger/logger.go:108	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:55:42	[34minfo[0m	utils/setting.go:48	端口号	{"LocalPort": 13010}
+2020-07-13 13:55:42	[34minfo[0m	utils/setting.go:51	redis缓存	{"ENABLE": false}
+2020-07-13 13:55:42	[34minfo[0m	utils/setting.go:55	ukey编号	{"UkeySN": "123456abc"}
+2020-07-13 13:55:42	[34minfo[0m	utils/setting.go:57	配置初始化按完成 版本:2020-06-18 01
+2020-07-13 13:55:42	[34minfo[0m	utils/setting.go:58	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-07-13 13:55:43	[34minfo[0m	cache/cache.go:30	不启用redis
+2020-07-13 13:55:47	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:47	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/login/user opt:POST
+2020-07-13 13:55:47	[34minfo[0m	middleware/mw_recover.go:50	body:{"userName":"admin","password":"21232f297a57a5a743894a0e4a801fc3"}
+2020-07-13 13:55:47	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXVpZCI6ImU2NzI5YzA3LTI0ZDItNGEzYS04MmI0LWUwMDg5NjBhOGYyMSJ9.syxKF5X_8Q_VEGBx5QW5IaAlHYlP5BwOxkGM8PBHkMU"}}}
+2020-07-13 13:55:47	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:47	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:GET
+2020-07-13 13:55:47	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:55:47	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"isRegister":"1","ukey":"123456abc"}}}
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/unitInfo opt:GET
+2020-07-13 13:55:48	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:48	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unitName":"烦烦烦","unifiedSocialCreditCode":"131549874984916513","organizationCodeSuperiorCompetentUnit":"165498798465979879","superiorSupervisorName":"胜多负少","unitType":"20","jobContact":"大师傅士大夫","jobPhoneNumber":"13111111111","administrativeAreaCode":"620000","openingModule1":"1","openingModule2":"1","openingModule3":"0","ukey":"123456abc","remark":""}}}
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-13 13:55:48	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}}
+2020-07-13 13:55:48	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-13 13:55:48	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-13 13:55:48	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"0","recordNum":"0","changeNum":"0","undoNum":"0","todayNum":"0"},"packageWaitingInfo":{"total":"0","todayNum":"0"},"electronicFileWaitingInfo":{"total":"0","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
+2020-07-13 13:55:50	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:50	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/unitType opt:GET
+2020-07-13 13:55:50	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:55:50	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "dwlx"}
+2020-07-13 13:55:50	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"10","label":"党政机关"},{"value":"20","label":"金融系统"},{"value":"30","label":"教科文卫系统"},{"value":"40","label":"国有大中型企业单位"},{"value":"90","label":"其他单位"}]}}}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&selectValue=&direction=1 opt:GET
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-13 13:55:51	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-13 13:55:51	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	database/sqlTool.go:132	sql:, select count(*) as counts from d_baryxxb_t  WHERE sczt = 0
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	database/sqlTool.go:133	args:	{"args": null}
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/whiteList?pageNo=1&pageSize=10&direction=1 opt:GET
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","list":null}}}
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-13 13:55:51	[34minfo[0m	db/white_list.go:77	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t WHERE sczt = ? AND sfbmd = ? ORDER BY ryid DESC LIMIT ?, ?
+2020-07-13 13:55:51	[34minfo[0m	db/white_list.go:87	sql:, SELECT count(1) AS count FROM d_baryxxb_t WHERE sczt = 0 AND sfbmd = 1
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","whiteList":null}}}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/person/report?pageNo=1&pageSize=10&selectValue=&direction=1 opt:GET
+2020-07-13 13:55:51	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-13 13:55:51	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-13 13:55:51	[34minfo[0m	database/sqlTool.go:132	sql:, select count(*) as counts from d_baryxxb_t  WHERE sczt = 0
+2020-07-13 13:55:51	[34minfo[0m	database/sqlTool.go:133	args:	{"args": null}
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","list":null}}}
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/logEventType opt:GET
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:55:51	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/log?pageNo=1&pageSize=10&user=&event=&direction=1 opt:GET
+2020-07-13 13:55:51	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "rzsj"}
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"登录"},{"value":"02","label":"单位信息"},{"value":"03","label":"管理员信息"},{"value":"04","label":"原始数据导入"},{"value":"05","label":"白名单"},{"value":"06","label":"人员报备"},{"value":"07","label":"出国境审批"},{"value":"08","label":"同意函"},{"value":"09","label":"违规预警"},{"value":"10","label":"证件业务"},{"value":"11","label":"证件保管柜"}]}}, "status": 200}
+2020-07-13 13:55:51	[31merror[0m	management/log.go:52	3
+[{3 1 01 登录 2020-07-13 05:55:47 +0000 UTC 2020-07-13 05:55:47 +0000 UTC     0} {2 1 02 新增 2020-07-13 05:40:43 +0000 UTC 2020-07-13 05:40:43 +0000 UTC     0} {1 1 01 登录 2020-07-13 05:39:54 +0000 UTC 2020-07-13 05:39:54 +0000 UTC     0}]
+2020-07-13 13:55:51	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"logList":[{"user":"管理员","event":"01","eventContent":"登录","operationTime":"2020-07-13"},{"user":"管理员","event":"02","eventContent":"新增","operationTime":"2020-07-13"},{"user":"管理员","event":"01","eventContent":"登录","operationTime":"2020-07-13"}],"total":"3"}}}
+2020-07-13 13:55:52	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:52	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/registries/package/list?pageNo=1&pageSize=10&direction=1&state=5 opt:GET
+2020-07-13 13:55:52	[34minfo[0m	db/package.go:119	sql:, SELECT baid,balx,zbh,zbrysl,zbr,dqzt,dzdalj,dzdacjsj,sbsj,cjsj,sczt FROM m_djba_t  WHERE sczt = 0 AND ( dqzt = ?) order by baid DESC  LIMIT ?, ?
+2020-07-13 13:55:52	[34minfo[0m	db/package.go:120	args2:	{"args2": ["5",0,10]}
+2020-07-13 13:55:52	[34minfo[0m	database/sqlTool.go:132	sql:, select count(*) as counts from m_djba_t  WHERE sczt = 0 AND ( dqzt = ?)
+2020-07-13 13:55:52	[34minfo[0m	database/sqlTool.go:133	args:	{"args": ["5"]}
+2020-07-13 13:55:52	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","list":null}}}
+2020-07-13 13:55:53	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:53	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-13 13:55:53	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-13 13:55:53	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:55:53	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}, "status": 200}
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-13 13:55:53	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-13 13:55:53	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"0","recordNum":"0","changeNum":"0","undoNum":"0","todayNum":"0"},"packageWaitingInfo":{"total":"0","todayNum":"0"},"electronicFileWaitingInfo":{"total":"0","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
+2020-07-13 13:55:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dictionary/professionalJob opt:GET
+2020-07-13 13:55:54	[34minfo[0m	db/dictionary.go:52	sql:, SELECT zdbm, zdz FROM d_sjzd_t WHERE zdlx = ? 
+2020-07-13 13:55:54	[34minfo[0m	db/dictionary.go:53	args:	{"typeName": "zw"}
+2020-07-13 13:55:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"list":[{"value":"01","label":"国家级正职"},{"value":"02","label":"国家级副职"},{"value":"03","label":"省部级正职"},{"value":"04","label":"省部级副职"},{"value":"05","label":"厅局级正职"},{"value":"06","label":"厅局级副职"},{"value":"07","label":"县处级正职"},{"value":"08","label":"县处级副职"},{"value":"09","label":"乡科级正职"},{"value":"10","label":"乡科级副职"}]}}}
+2020-07-13 13:55:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/dataQuery/license/list?pageNo=1&pageSize=10&direction=1 opt:GET
+2020-07-13 13:55:54	[34minfo[0m	dataQuery/dataQuery.go:28	pararm:{  1 10 1}
+2020-07-13 13:55:54	[34minfo[0m	db/registries.go:134	sql:, SELECT ryid,baryx,barym,baryxm,sfzhm,xb,csrq,hkszd,sjhm,mz,jg,zzmm,rdsj,jkzk,gnzxqsqk,gwqsqk,gzsj,rszgdw,gzdw,zjzc,zw,gzjl,balx,zt,hz,gatxz,twtxz,sfbmd,bz,cjsj,xgsj,sczt FROM d_baryxxb_t  WHERE sczt = 0 order by ryid DESC  LIMIT ?, ?
+2020-07-13 13:55:54	[34minfo[0m	db/registries.go:135	args:	{"args2": [0,10]}
+2020-07-13 13:55:54	[34minfo[0m	database/sqlTool.go:132	sql:, select count(*) as counts from d_baryxxb_t  WHERE sczt = 0
+2020-07-13 13:55:54	[34minfo[0m	database/sqlTool.go:133	args:	{"args": null}
+2020-07-13 13:55:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"data":null,"total":"0"}}}
+2020-07-13 13:55:56	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:56	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/virtual/query/statistics opt:GET
+2020-07-13 13:55:56	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:55:56	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/virtual/query/statisticsInfo?selectValue=&certificateType=&state=&pageNo=1&pageSize=10&direction=1 opt:GET
+2020-07-13 13:55:56	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"HongKongMacauPass":{"total":"0","inCabinetNum":"0","outCabinetNum":"0"},"TaiwanPassMainlandResidents":{"total":"0","inCabinetNum":"0","outCabinetNum":"0"},"electronicPassport":{"total":"0","inCabinetNum":"0","outCabinetNum":"0"},"total":"0"}}}
+2020-07-13 13:55:56	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"total":"0","data":null}}}
+2020-07-13 13:56:13	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:13	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/login/user opt:POST
+2020-07-13 13:56:13	[34minfo[0m	middleware/mw_recover.go:50	body:{"userName":"admin","password":"21232f297a57a5a743894a0e4a801fc3"}
+2020-07-13 13:56:13	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXVpZCI6IjAxZGFmNzNmLTM3MmYtNDYyMi1iZWNlLTE0MTQ1YmZmNDYwMiJ9.GssjB959K8pDCfnsjIpE_xZA1eE3qT6sfmNo5lyEI4c"}}, "status": 200}
+2020-07-13 13:56:13	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:13	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:GET
+2020-07-13 13:56:13	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:56:13	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"isRegister":"1","ukey":"123456abc"}}, "status": 200}
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/unitInfo opt:GET
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:14	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-13 13:56:14	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-13 13:56:14	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unitName":"烦烦烦","unifiedSocialCreditCode":"131549874984916513","organizationCodeSuperiorCompetentUnit":"165498798465979879","superiorSupervisorName":"胜多负少","unitType":"20","jobContact":"大师傅士大夫","jobPhoneNumber":"13111111111","administrativeAreaCode":"620000","openingModule1":"1","openingModule2":"1","openingModule3":"0","ukey":"123456abc","remark":""}}}
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-13 13:56:14	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}}
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-13 13:56:14	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-13 13:56:14	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"0","recordNum":"0","changeNum":"0","undoNum":"0","todayNum":"0"},"packageWaitingInfo":{"total":"0","todayNum":"0"},"electronicFileWaitingInfo":{"total":"0","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
+2020-07-13 13:56:53	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:53	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/login/user opt:POST
+2020-07-13 13:56:53	[34minfo[0m	middleware/mw_recover.go:50	body:{"userName":"admin","password":"21232f297a57a5a743894a0e4a801fc3"}
+2020-07-13 13:56:53	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXVpZCI6IjI1ODA5OWQxLTUwZjktNDQwZC04MjkwLTFlZGUwYzQ3YzBkYSJ9.KbqwioWz81LMUerzVErznhtHxV6oU_KnczTZKMk_ybc"}}}
+2020-07-13 13:56:53	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:53	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/device/registered opt:GET
+2020-07-13 13:56:53	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:56:53	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"isRegister":"1","ukey":"123456abc"}}}
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/systemManagement/unitInfo opt:GET
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:45	
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/regist opt:GET
+2020-07-13 13:56:54	[34minfo[0m	db/unit.go:16	sql:, SELECT dwid,dwmc,tyshxydm,dwlx,xzqybm,gzlxr,gzlxdh,dlmm,sjzgdwzzjgdm,sjzgdwmc,ktmk1,ktmk2,ktmk3,ukeybh,ukeymw,bz,cjsj,xgsj,sczt FROM m_dwxx_t WHERE sczt = 0
+2020-07-13 13:56:54	[34minfo[0m	middleware/mw_recover.go:46	client:127.0.0.1 url:/zjg/2d/homePage/certificate opt:GET
+2020-07-13 13:56:54	[34minfo[0m	common/http.go:136	ResJSON	{"val": {"result":true,"errorCode":0,"message":"success","data":{"unReadMessage":{"total":"0","exiAndEntryAnomaly":"0","certificateAccessException":"0","todayNum":"0"},"certificateAtDark":{"total":"0","todayNum":"0"},"certificateNum":{"total":"0","inLibrary":"0","outLibrary":"0"},"returnNumWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"certificateReturnWaiting":{"total":"0","todayNum":"0","expectedNum":"0"},"incomingApplicationForm":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"},"consentLetter":{"total":"0","printWaiting":"0","takingPicturesWaiting":"0","submitWaiting":"0","todayNum":"0"}}}, "status": 200}
+2020-07-13 13:56:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"unitName":"烦烦烦","unifiedSocialCreditCode":"131549874984916513","organizationCodeSuperiorCompetentUnit":"165498798465979879","superiorSupervisorName":"胜多负少","unitType":"20","jobContact":"大师傅士大夫","jobPhoneNumber":"13111111111","administrativeAreaCode":"620000","openingModule1":"1","openingModule2":"1","openingModule3":"0","ukey":"123456abc","remark":""}}}
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:32	sql:, 
+SELECT balx     AS name,
+       COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE sczt != 1
+GROUP BY balx
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:50	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:61	sql:, SELECT COUNT(1) AS count
+FROM d_baryxxb_t
+WHERE (zt = ? OR zt = ?) AND sczt != 1
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:72	sql:, SELECT COUNT(1) AS count
+FROM m_djba_t
+WHERE cjsj >= ? AND sczt != 1
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:113	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE sczt != 1
+GROUP BY dqzt
+2020-07-13 13:56:54	[34minfo[0m	db/home.go:137	sql:, 
+SELECT COUNT(1) AS count,
+       dqzt     AS name
+FROM m_djba_t
+WHERE xgsj >= ? AND sczt != 1
+GROUP BY dqzt
+2020-07-13 13:56:54	[34minfo[0m	common/http.go:136	ResJSON	{"status": 200, "val": {"result":true,"errorCode":0,"message":"success","data":{"registInfo":{"total":"0","recordNum":"0","changeNum":"0","undoNum":"0","todayNum":"0"},"packageWaitingInfo":{"total":"0","todayNum":"0"},"electronicFileWaitingInfo":{"total":"0","todayNum":"0"},"recordResultWaitingInfo":{"total":"0","todayNum":"0"}}}}
