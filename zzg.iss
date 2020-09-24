@@ -27,7 +27,7 @@ OutputDir=D:\electron\Output
 OutputBaseFilename=jixin
 Compression=lzma
 SolidCompression=yes
-DisableDirPage=yes
+;DisableDirPage=yes
 WizardStyle=modern
 
 [Languages]
@@ -39,21 +39,78 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "D:\electron\pack\jixin\jixin-win32-x64\jixin.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\electron\pack\jixin\jixin-win32-x64\static\zjg_2d.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\electron\pack\jixin\jixin-win32-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-;Source: "D:\electron\pack\jixin\jixin-win32-x64\static\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-;Source: "D:\electron\pack\jixin\jixin-win32-x64\static\remove.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\electron\pack\jixin\jixin-win32-x64\static\*"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-x64\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-x64\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-x64\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-x64\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-x64\static\config\app.ini"; DestDir: "{app}\{#enName}\config"; Flags: sharedfile uninsneveruninstall
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+;NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Code]
+//安装前执行程序
+//procedure RunOtherInstaller;
+//function InitializeSetup(): Boolean;
+//var
+ // ResultCode: Integer;
+//begin
+  //Exec('{app}\{#enName}\copy.bat','','', SW_SHOW, ewNoWait, ResultCode)
+//  if not Exec(ExpandConstant('C:\{#enName}\static\copy.bat'), '', '', SW_SHOWNORMAL,
+//    ewWaitUntilTerminated, ResultCode)
+//  then
+    //MsgBox('Other installer failed to run!' + #13#10 +
+    //  SysErrorMessage(ResultCode), mbError, MB_OK);
+//end;
+//function InitializeSetup(): Boolean;
+//var
+//RCode: Integer;
+//begin
+//Exec('{app}\{#enName}\copy.bat','','', SW_SHOW, ewNoWait, RCode);
+//end;
+//安装前卸载程序
+//function InitializeSetup(): boolean;  
+//var  
+  //ResultStr: String;  
+  //ResultCode: Integer;  
+//begin  
+  //if RegQueryStringValue(HKLM, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6B4AE0CA-47D9-4EE8-B728-4BBA10204401}_is1', 'UninstallString', ResultStr) then  
+  //  begin  
+    //  ResultStr := RemoveQuotes(ResultStr);  
+      //Exec(ResultStr, '/silent', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);  
+    //end;  
+    //result := true;  
+//end;
+
+//安装前判断文件夹是否存在，不存在则不执行复制文件，直接执行安装操作，存在则复制文件并且执行安装操作
+//procedure RunOtherInstaller;
+function InitializeSetup(): Boolean;
+var
+  ResultCode: Integer;
+begin
+  if FileExists(ExpandConstant('C:\{#enName}\static\copy.bat')) then
+    begin 
+      Exec(ExpandConstant('C:\{#enName}\static\copy.bat'), '', '', SW_SHOWNORMAL, ewWaitUntilTerminated, ResultCode)
+      Result := True; 
+    end
+  else 
+    begin 
+      //MsgBox('没有找到copy文件！', mbCriticalError, MB_OK); 
+      Result := True; 
+     end; 
+end;
+    
+  
+
+
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-Filename: "{app}\static\installAndStart.bat"; Description: "Install bat"; Flags: nowait skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags:  postinstall skipifsilent
+Filename: "{app}\static\installAndStart.bat"; Description: "Install bat"; Flags: skipifsilent
 
 [UninstallRun]
-Filename: "{app}\{#enName}\remove.bat"; Flags: nowait hidewizard
+Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard
+Filename: "{app}\{#enName}\remove.bat"; Flags: hidewizard

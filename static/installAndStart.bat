@@ -5,6 +5,8 @@ set filePath=%~dp0
 echo %filePath%
 cd %filePath%
 %~d0
+
+copy C:\backup\zhengjiangui.db C:\jixin\static
+
 %filePath%zjg_2d.exe install
 %filePath%zjg_2d.exe start
-

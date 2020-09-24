@@ -6,9 +6,13 @@ set filePath=%~dp0
 echo %filePath%
 cd %filePath%
 %~d0
+
+md C:\backup
+
+copy %filePath%zhengjiangui.db C:\backup
+
 %filePath%zjg_2d.exe stop
 %filePath%zjg_2d.exe remove
- 
 
 del %filePath%..\static\*.* /f/s/q/a
 rd %filePath%..\static\log
