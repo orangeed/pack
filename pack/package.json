@@ -1,10 +1,10 @@
 {
-  "name": "jixin",
-  "version": "1.0.0",
+  "name": "electron-pack",
+  "version": "1.1.1",
   "description": "jixin",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ./",
     "pack": "electron-packager ./ jixin --platform=win32 --arch=x64 --app-version=1.0.0 --out=./jixin --electron-version=9.0.2 --icon=logo.ico --asar",
     "test": "npm run build && mocha -t 5000",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
@@ -12,10 +12,7 @@
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "pack"
   ],
   "author": "orange",
   "license": "CC0-1.0",
