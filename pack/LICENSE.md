@@ -1,4 +1,4 @@
-MIT 
+MIT License
 
 Begin license text.
 Copyright <YEAR> <COPYRIGHT HOLDER>

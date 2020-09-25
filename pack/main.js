@@ -1,4 +1,27 @@
-const pack = (url) => {
+'use strict'
+
+/**
+ * @param {Object} config 
+ * @example 
+ * config = {
+ *    width: 1280, // 窗口的宽度 number
+ *    minWidth: 1280, // 窗口最小宽度 number
+ *    height: 960, // 窗口高度 number
+ *    minHeight: 960, // 窗口最小高度 number
+ *    frame: true, // 是否有边框 boolean
+ *    center: true, // 窗口是否在中心 boolean 
+ *    minimizable: true, //窗口是否可以最小化 boolean
+ *    maximizable: true, //窗口是否可以最大化 boolean
+ *    webPreferences: {
+ *       nodeIntegration: true, //是否在Web工作器中启用了Node集成 boolean
+ *       webSecurity: false boolean
+ *     },
+ *    url:'http://www.zhihu.com' // 打包地址 string
+ *    isWeb: true,// 是否是网站 boolean
+ *    openDevTools: true, // 是否打开开发者工具 boolean
+ */
+
+const pack = (config) => {
   const {
     app,
     BrowserWindow,
@@ -12,22 +35,19 @@ const pack = (url) => {
     // 创建浏览器窗口
     const win = new BrowserWindow({
       // icon: './dist/login_logo.png', //窗口图标
-      width: 1280,
-      minWidth: 1280,
-      height: 960,
-      minHeight: 960,
-      // resizable: false, //禁止改变主窗口尺寸
-      // fullscreen: true,//全屏
-      frame: true, //有边框
-      // transparent: true,//透明边框
-      center: true, //窗口是否在中心
-      minimizable: true, //窗口是否可以最小化.
-      maximizable: true, //窗口是否可以最大化.
-      // kiosk: false, //使用kiosk模式。如果使用kiosk模式，应用程序将全屏显示，并且阻止用户离开应用
-      webPreferences: {
-        nodeIntegration: true,
-        webSecurity: false
-      }
+      width: config.width,
+      minWidth: config.minWidth,
+      height: config.height,
+      minHeight: config.minHeight,
+      // resizable: config.resizable, //禁止改变主窗口尺寸
+      // fullscreen: config.resizable,//全屏
+      frame: config.frame, //有边框
+      // transparent: config.transparent,//透明边框
+      center: config.center, //窗口是否在中心
+      minimizable: config.minimizable, //窗口是否可以最小化.
+      maximizable: config.maximizable, //窗口是否可以最大化.
+      // kiosk: config.kiosk, //使用kiosk模式。如果使用kiosk模式，应用程序将全屏显示，并且阻止用户离开应用
+      webPreferences: config.webPreferences
     })
     myWindow = win
     //窗口默认最大化
@@ -35,18 +55,20 @@ const pack = (url) => {
     win.show()
 
     // 并且为你的应用加载index.html
-    // win.loadFile('./test/index.html')
+    if (config.isWeb) {
+      win.loadURL(config.url)
 
-    // win.loadFile('./dist/index.html')
-    win.loadURL(url)
-
+    } else {
+      win.loadFile(config.url)
+    }
     // 打开开发者工具
-    win.webContents.openDevTools()
+    if (config.openDevTools) {
+      win.webContents.openDevTools()
+    }
   }
 
   //检测是否是只打开了一个窗口程序
   const gotTheLock = app.requestSingleInstanceLock()
-
   if (!gotTheLock) {
     app.quit()
   } else {
