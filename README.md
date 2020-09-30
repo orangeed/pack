@@ -6,6 +6,8 @@
 
 ``` bash
 npm install electron-pack
+
+yarn add electron-pack
 ```
 
 ## 使用
@@ -21,7 +23,8 @@ pack(config)
 ```
 
 当然，这里可以直接下载使用。
-```
+
+``` 
 npm i
 
 npm run start
