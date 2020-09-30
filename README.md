@@ -25,6 +25,14 @@ const config = {}
 pack(config)
 ```
 
+当然，你也可以直接下载使用。
+
+``` 
+npm i 
+
+npm run start 
+```
+
 ## 运行
 
 ``` bash
