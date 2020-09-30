@@ -1,5 +1,5 @@
 'use strict'
-
+const electron = require('electron')
 /**
  * @param {Object} config 
  * @example 
@@ -12,21 +12,18 @@
  *    center: true, // 窗口是否在中心 boolean 
  *    minimizable: true, //窗口是否可以最小化 boolean
  *    maximizable: true, //窗口是否可以最大化 boolean
- *    webPreferences: {
- *       nodeIntegration: true, //是否在Web工作器中启用了Node集成 boolean
- *       webSecurity: false boolean
- *     },
  *    url:'http://www.zhihu.com' // 打包地址 string
  *    isWeb: true,// 是否是网站 boolean
  *    openDevTools: true, // 是否打开开发者工具 boolean
  */
-
 const pack = (config) => {
+
   const {
     app,
     BrowserWindow,
     Menu
-  } = require('electron')
+  } = electron
+
   let myWindow = null
 
   function createWindow() {
@@ -47,7 +44,11 @@ const pack = (config) => {
       minimizable: config.minimizable, //窗口是否可以最小化.
       maximizable: config.maximizable, //窗口是否可以最大化.
       // kiosk: config.kiosk, //使用kiosk模式。如果使用kiosk模式，应用程序将全屏显示，并且阻止用户离开应用
-      webPreferences: config.webPreferences
+      webPreferences: {
+        nodeIntegration: false, //是否在Web工作器中启用了Node集成
+        webSecurity: false,
+        preload: __dirname + '/preload.js'
+      }
     })
     myWindow = win
     //窗口默认最大化
@@ -61,6 +62,7 @@ const pack = (config) => {
     } else {
       win.loadFile(config.url)
     }
+    console.log('version', process.versions.chrome);
     // 打开开发者工具
     if (config.openDevTools) {
       win.webContents.openDevTools()
@@ -110,6 +112,4 @@ const pack = (config) => {
   // code. 也可以拆分成几个文件，然后用 require 导入。
 }
 
-module.exports = {
-  pack
-}
+module.exports = pack
