@@ -10,9 +10,9 @@ const config = {
     center: true, // 窗口是否在中心
     minimizable: true, //窗口是否可以最小化
     maximizable: true, //窗口是否可以最大化
-    url: 'http://www.zhihu.com', // 打包地址
+    url: 'https://music.migu.cn/v3', // 打包地址
     isWeb: true, // 是否是网站
-    openDevTools: true, // 是否打开开发者工具
+    openDevTools: false, // 是否打开开发者工具
 }
 
 pack(config)
