@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang=zh-cmn-Hans><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=logo.ico><title>报备审批和证件领用</title><style>.first-loading-wrp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 420px;
+      height: 100vh;
+    }
+
+    .first-loading-wrp>h1 {
+      font-size: 128px
+    }
+
+    .first-loading-wrp .loading-wrp {
+      height: 50vh;
+      padding: 98px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .dot {
+      animation: antRotate 1.2s infinite linear;
+      transform: rotate(45deg);
+      position: relative;
+      display: inline-block;
+      font-size: 32px;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+    }
+
+    .dot i {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      display: block;
+      background-color: #1890ff;
+      border-radius: 100%;
+      transform: scale(.75);
+      transform-origin: 50% 50%;
+      opacity: .3;
+      animation: antSpinMove 1s infinite linear alternate
+    }
+
+    .dot i:nth-child(1) {
+      top: 0;
+      left: 0
+    }
+
+    .dot i:nth-child(2) {
+      top: 0;
+      right: 0;
+      -webkit-animation-delay: .4s;
+      animation-delay: .4s
+    }
+
+    .dot i:nth-child(3) {
+      right: 0;
+      bottom: 0;
+      -webkit-animation-delay: .8s;
+      animation-delay: .8s
+    }
+
+    .dot i:nth-child(4) {
+      bottom: 0;
+      left: 0;
+      -webkit-animation-delay: 1.2s;
+      animation-delay: 1.2s
+    }
+
+    .cop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes antRotate {
+      to {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg)
+      }
+    }
+
+    @-webkit-keyframes antRotate {
+      to {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg)
+      }
+    }
+
+    @keyframes antSpinMove {
+      to {
+        opacity: 1
+      }
+    }
+
+    @-webkit-keyframes antSpinMove {
+      to {
+        opacity: 1
+      }
+    }</style><link href=css/chunk-03aeface.abd60f06.css rel=prefetch><link href=css/chunk-0bcd995f.441eaeed.css rel=prefetch><link href=css/chunk-18af63dd.07df502b.css rel=prefetch><link href=css/chunk-2b09e248.3003e768.css rel=prefetch><link href=css/chunk-2ef62bfc.92b3d66c.css rel=prefetch><link href=css/chunk-32223131.56768966.css rel=prefetch><link href=css/chunk-33b1ea32.11a78050.css rel=prefetch><link href=css/chunk-38c25dfb.c6fb6a60.css rel=prefetch><link href=css/chunk-3a4c9f0c.56768966.css rel=prefetch><link href=css/chunk-3ec07f03.cfbc6e33.css rel=prefetch><link href=css/chunk-518cc236.64b48320.css rel=prefetch><link href=css/chunk-5c37b9cd.273bfe57.css rel=prefetch><link href=css/chunk-624171d8.65c483ab.css rel=prefetch><link href=css/chunk-641d88fc.d203a9ad.css rel=prefetch><link href=css/chunk-641dd01e.0c5d81a1.css rel=prefetch><link href=css/chunk-72eb1f8d.8c13f5fe.css rel=prefetch><link href=css/chunk-75ac42d2.4c12122f.css rel=prefetch><link href=css/chunk-7dcbab1b.c21e7002.css rel=prefetch><link href=css/chunk-7e45e0f5.665f33e8.css rel=prefetch><link href=css/chunk-94cb0bd4.b8f90c7e.css rel=prefetch><link href=css/chunk-d69c0052.d4e26f04.css rel=prefetch><link href=css/chunk-f240d0a2.da93553e.css rel=prefetch><link href=css/chunk-f2d0a348.02089c4a.css rel=prefetch><link href=css/user.f7fa4bd5.css rel=prefetch><link href=js/chunk-03aeface.2667417f.js rel=prefetch><link href=js/chunk-06568fb8.d52cf4ff.js rel=prefetch><link href=js/chunk-0bcd995f.2b771340.js rel=prefetch><link href=js/chunk-18af63dd.128c5c36.js rel=prefetch><link href=js/chunk-2b09e248.86ae336c.js rel=prefetch><link href=js/chunk-2d0d0624.b8d816fe.js rel=prefetch><link href=js/chunk-2d0e907b.635bf369.js rel=prefetch><link href=js/chunk-2ef62bfc.bb01b3a6.js rel=prefetch><link href=js/chunk-32223131.671bc577.js rel=prefetch><link href=js/chunk-33b1ea32.28691560.js rel=prefetch><link href=js/chunk-38c25dfb.19a362ee.js rel=prefetch><link href=js/chunk-3a4c9f0c.dc2d1734.js rel=prefetch><link href=js/chunk-3ec07f03.9797da90.js rel=prefetch><link href=js/chunk-518cc236.01e38b1b.js rel=prefetch><link href=js/chunk-5c37b9cd.59911221.js rel=prefetch><link href=js/chunk-5edf5c4a.408848a9.js rel=prefetch><link href=js/chunk-624171d8.39bd05c2.js rel=prefetch><link href=js/chunk-641d88fc.45ecb690.js rel=prefetch><link href=js/chunk-641dd01e.a466a5d6.js rel=prefetch><link href=js/chunk-72eb1f8d.5061c2e9.js rel=prefetch><link href=js/chunk-75ac42d2.74c3e814.js rel=prefetch><link href=js/chunk-7dcbab1b.73fd7678.js rel=prefetch><link href=js/chunk-7e45e0f5.6d4be1a6.js rel=prefetch><link href=js/chunk-94cb0bd4.207da447.js rel=prefetch><link href=js/chunk-a9d86590.571a2b52.js rel=prefetch><link href=js/chunk-d69c0052.8073bb9e.js rel=prefetch><link href=js/chunk-f240d0a2.06f7c870.js rel=prefetch><link href=js/chunk-f2d0a348.5f6537f8.js rel=prefetch><link href=js/chunk-f6bdc9da.d338a5fd.js rel=prefetch><link href=js/fail.47e1a242.js rel=prefetch><link href=js/user.f5f8dedc.js rel=prefetch><link href=css/app.a0fe9066.css rel=preload as=style><link href=css/chunk-vendors.ecf0e241.css rel=preload as=style><link href=js/app.0d7bf62c.js rel=preload as=script><link href=js/chunk-vendors.0bf35e23.js rel=preload as=script><link href=css/chunk-vendors.ecf0e241.css rel=stylesheet><link href=css/app.a0fe9066.css rel=stylesheet></head><body><noscript><strong>We're sorry but jixinwulianwang doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><div class=first-loading-wrp><h2>报备审批和证件领用</h2><div class=loading-wrp><span class="dot dot-spin"><i></i><i></i><i></i><i></i></span></div><div class=cop><p>Copyright © 2020 公安部第一研究所, All Rights Reserved.</p></div></div></div><script src=js/chunk-vendors.0bf35e23.js></script><script src=js/app.0d7bf62c.js></script></body></html>

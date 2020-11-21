@@ -9,7 +9,7 @@ cd %filePath%
 
 md C:\backup
 
-copy %filePath%zhengjiangui.db C:\backup
+copy %filePath%zhengjiangui2.db C:\backup
 
 %filePath%zjg_2d.exe stop
 %filePath%zjg_2d.exe remove
@@ -25,5 +25,4 @@ del "%filePath%config\*.*" /f/s/q/a
 rd %filePath%config
 del %filePath%*.* /f/s/q/a
 
-pause
 
