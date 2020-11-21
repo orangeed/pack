@@ -24,7 +24,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\electron\Output
-OutputBaseFilename=jixin
+OutputBaseFilename=jixin_64
 Compression=lzma
 SolidCompression=yes
 ;DisableDirPage=yes
@@ -44,7 +44,7 @@ Source: "D:\electron\pack\jixin\jixin-win32-x64\static\installAndStart.bat"; Des
 Source: "D:\electron\pack\jixin\jixin-win32-x64\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-x64\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-x64\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-x64\static\config\app.ini"; DestDir: "{app}\{#enName}\config"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-x64\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 ;NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
