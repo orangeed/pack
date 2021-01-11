@@ -1,0 +1,7 @@
+Server:
+  Name: readcert  # 工程名
+  RunMode: release
+  HttpPort: 18234
+  ReadTimeout: 60
+  WriteTimeout: 60
+  MaxRetries: 30

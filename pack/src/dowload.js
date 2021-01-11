@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require("path");
 const axios = require('axios')
 const fsPromises = require('fs').promises
-const package = require('../package.json')
+// const package = require('../package.json')
 const {
     exec,
     spawn
@@ -13,6 +13,8 @@ const electron = require('electron')
 const {
     app,
 } = electron
+var util = require("util")
+
 
 // 获取真实的绝对路径
 const dirPathO = path.join(__dirname).split('resources')
@@ -51,8 +53,9 @@ let num = 0
 const reName = (name, newName, suffix) => {
     num++
     console.log('begin to rename!');
-    fs.rename(relativePath + 'dowload/' + name, relativePath + 'dowload/' + newName + '.' + suffix, err => {
+    fs.rename(relativePath + 'dowload\\' + name, relativePath + 'dowload\\' + newName + '.' + suffix, err => {
         console.log('error', err);
+
         if (err) {
             if (num <= 1) {
                 console.log('rename again!');
@@ -131,12 +134,74 @@ const copyFile = (newName, suffix) => {
         });
 }
 
+// let filePath = dirPath + '\\app.asar\\package.json'
+// const package = require(`${filePath}`)
 // 修改package的version号码
 const reviseVersion = (name, newName, suffix) => {
-    package.version = name
-    console.log('version change success!');
-    console.log('package', package);
+
+    let path = relativePath + '/log.txt'
+
+    const versionPath = relativePath + '/version.txt'
+    fs.writeFile(versionPath, name, err => {
+        if (err) {
+            const error = util.inspect(err, {
+                depth: null
+            })
+            fs.appendFile(path, `错误信息：${error}`, (err) => {
+                if (err) throw err
+                console.log(`错误信息已经写入${path}中！`)
+            })
+        } else {
+            console.log('Version save success!');
+        }
+    })
     shellReName(name, newName, suffix)
+
+
+
+
+
+
+
+
+    // let arr = {
+    //     ...name
+    // }
+    // let val = Object.values(arr)
+    // let str = ''
+    // val.forEach(v => {
+    //     str += v
+    // })
+    // console.log('str', str);
+    // package.version = str
+    // const packagesStr = util.inspect(package, {
+    //     depth: null
+    // })
+
+    // console.log('filePath',filePath);
+    // fs.readFile(filePath, 'utf8', (err, data) => {
+    //     if (!err) {
+    //         console.log('data', data.toString());
+    //         JSON.parse(data.toString()).version = name
+    //         console.log('修改', data);
+    //         fs.writeFile(filePath, data, (err) => {
+    //             if (!err) {
+    //                 const packagesStr = util.inspect(data, {
+    //                     depth: null
+    //                 })
+    //                 fs.appendFile(path, `修改了版本号：name,${name},${packagesStr}`, (error) => {
+    //                     if (error) throw error
+    //                     console.log(`成功已经写入${path}中！`)
+    //                 })
+    //             }
+    //         });
+    //     }
+    // })
+    // console.log('version change success!');
+    // fs.appendFile(path, `修改了版本号：name,${name},文件地址：${filePath},${packagesStr}`, (error) => {
+    //     if (error) throw error
+    //     console.log(`成功已经写入${path}中！`)
+    // })
 }
 
 // 打开指定文件程序
@@ -173,8 +238,9 @@ const dowloadFile = (url) => {
         })
         .then(res => {
             // console.log(res.data);
+            console.log('relativePath', relativePath);
             let w, newName;
-            w = fs.createWriteStream(relativePath + 'dowload/' + name)
+            w = fs.createWriteStream(relativePath + '\\dowload\\' + name)
 
             res.data.pipe(w)
             return new Promise((resolve, reject) => {
@@ -182,7 +248,6 @@ const dowloadFile = (url) => {
                     console.log('This file is over end!');
                     if (suffix == 'asar') {
                         newName = 'app'
-
 
                         // 复制文件
                         // copyFile(relativePath + 'dowload/' + name, relativePath + 'resources/' + name, name, newName, suffix)

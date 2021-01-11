@@ -4,7 +4,21 @@ const path = require("path");
 const _axios = require('axios')
 const update = require('./dowload')
 const packages = require('../package.json')
+const fs = require('fs')
+const util = require("util")
+// const config = require('./config');
+// const log = require('electron-log');
+// var originalFs = require('original-fs');
 
+// const path1 = 'C:\\jixin\\dowload\\app.asar'
+// console.log('***',
+//   originalFs.readFileSync(path1, 'utf-8')
+// );
+
+// log.transports.file.resolvePath = (variables) => {
+//   return path.join(config.project + '/log', 'electron.log');
+// };
+// console.log = log.log;
 
 /**
  * @param {Object} config 
@@ -22,6 +36,7 @@ const packages = require('../package.json')
  *    isWeb: true,// 是否是网站 boolean
  *    openDevTools: true, // 是否打开开发者工具 boolean
  */
+
 const pack = (config) => {
   const {
     app,
@@ -29,7 +44,10 @@ const pack = (config) => {
     Menu,
     dialog,
   } = electron
-  const dirPathO = path.join(__dirname)
+  const dirPath = path.join(__dirname)
+  const dirPathO = path.join(__dirname).split('resources')
+  console.log('dirPathO', dirPathO);
+  const relativePath = dirPathO[0];
 
   let myWindow = null
   // 创建窗口
@@ -54,7 +72,8 @@ const pack = (config) => {
       webPreferences: {
         nodeIntegration: false, //是否在Web工作器中启用了Node集成
         webSecurity: false,
-        preload: __dirname + '/preload.js'
+        // preload: __dirname + '/preload.js'
+        // preload: path.join(app.getAppPath(), 'preload.js'),
       },
     })
     myWindow = win
@@ -115,54 +134,86 @@ const pack = (config) => {
     })
   }
 
-  // 热更新检查
-  _axios({
-    url: 'http://118.178.86.183:13010/zjg_3s/version',
-    method: 'get',
-    params: {
-      code: '1',
-    },
-  }).then(res => {
-    if (res.data.errorCode == 0) {
-      console.log('res',res);
-      const dirPath = dirPathO.split('resources')
-      const relativePath = dirPath[0];
-      const localVersion = app.getVersion()
-      console.log('localVersion', localVersion);
-      const onlineVersion = res.data.data.name
-      console.log('onlineVersion', onlineVersion);
-      console.log(' res.data.data.httpPath', res.data.data.httpPath)
-      // return
-      if (localVersion < onlineVersion) {
-        // dialog.showOpenDialog({
-        //   properties: ['稍后更新', '立即更新']
-        // })
-        const dialogOpts = {
-          type: 'info',
-          buttons: ['立即更新', '稍后更新'],
-          title: '更新提醒',
-          message: `您有新的更新!`,
-          // detail: `内容如下：` + `${res.data.data.attch}`
-          detail: `内容如下：` + `${res.data.data.attach}`
-        }
 
-        dialog.showMessageBox(dialogOpts).then((returnValue) => {
-          console.log('returnValue', returnValue);
-          if (returnValue.response === 0) {
-            // const ls = spawn(update(res.data.data.httpPath))
-            // ls.stdout.on('data', data => {
-            //   console.log('stdout', data);
-            // })
-            // ls.stderr.on('data', data => {
-            //   console.log('stderr', data);
-            // })
-            update(res.data.data.httpPath)
-            // app.exit()
-          }
-        })
-      }
+  // 获取版本号
+  const versionPath = relativePath + '/version.txt'
+  const logoPath = relativePath + '/log.txt'
+
+  fs.readFile(versionPath, 'utf8', (err, data) => {
+    if (!err) {
+      console.log('data', data.toString());
+      up(data.toString())
+    } else {
+      console.log(err);
+      const localVersion = app.getVersion()
+      fs.writeFile(versionPath, localVersion, err => {
+        if (err) {
+          const error = util.inspect(err, {
+            depth: null
+          })
+          fs.appendFile(path, `错误信息：${error}`, (err) => {
+            if (err) throw err
+            console.log(`错误信息已经写入${path}中！`)
+          })
+        } else {
+          console.log('Version save success!');
+        }
+      })
     }
   })
+  // 热更新检查
+  const up = (localVersion) => {
+    _axios({
+      url: 'http://183.134.197.66:13010/zjg_3s/version',
+      method: 'get',
+      params: {
+        code: '1',
+      },
+    }).then(res => {
+      console.log('res', res.data.errorCode);
+      // const path = relativePath + '/log.txt'
+      const resStr = util.inspect(res.data, {
+        depth: null
+      })
+      const packagesStr = util.inspect(packages, {
+        depth: null
+      })
+      fs.appendFile(logoPath, `${resStr},${packagesStr}*****${dirPath},${localVersion}`, (error) => {
+        if (error) throw error
+        console.log(`成功已经写入${path}中！`)
+      })
+      if (res.data.errorCode == 0) {
+        console.log('localVersion', localVersion);
+        const onlineVersion = res.data.data.name
+        console.log('onlineVersion', onlineVersion);
+
+        fs.appendFile(logoPath, `下载更新！`, (error) => {
+          if (error) throw error
+          console.log(`成功已经写入${logoPath}中！`)
+        })
+        if (localVersion < onlineVersion) {
+
+          const dialogOpts = {
+            type: 'info',
+            buttons: ['立即更新', '稍后更新'],
+            title: '更新提醒',
+            message: `您有新的更新!`,
+            // detail: `内容如下：` + `${dirPathO},${packages},${localVersion},${onlineVersion}`
+            detail: `内容如下：` + `${res.data.data.attach}`
+          }
+
+          dialog.showMessageBox(dialogOpts).then((returnValue) => {
+            console.log('returnValue', returnValue);
+            if (returnValue.response === 0) {
+
+              update(res.data.data.httpPath)
+            }
+          })
+        }
+      }
+    })
+  }
+
 
   // In this file you can include the rest of your app's specific main process
   // code. 也可以拆分成几个文件，然后用 require 导入。

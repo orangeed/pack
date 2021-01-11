@@ -65,14 +65,281 @@ System.Security.SecurityException: 未找到源，但未能搜索某些或全部
    logtoconsole = 
    logfile = D:\c#pro\readcardservice\readcardservice\bin\Debug\readcardservice.InstallLog
    assemblypath = D:\c#pro\readcardservice\readcardservice\bin\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+警告: 源 readcardService 未在本地计算机上注册。
+正在从系统中移除服务 readcardService...
+在卸载 System.ServiceProcess.ServiceInstaller 安装程序的过程中发生异常。
+System.ComponentModel.Win32Exception: 指定的服务未安装。
+在卸载的过程中发生异常。将忽略该异常并继续卸载。但是，在卸载完成之后应用程序可能未完全卸载。
 正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
 受影响的参数是:
    logtoconsole = 
    logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
    assemblypath = D:\electron\readCard\Debug\readcardservice.exe
-正在安装服务 huzhoureadcardService...
-已成功安装服务 huzhoureadcardService。
-正在日志 Application 中创建 EventLog 源 huzhoureadcardService...
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在回滚程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在将事件日志还原到源 readcardService 的前一状态。
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+警告: 源 readcardService 未在本地计算机上注册。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在回滚程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在将事件日志还原到源 readcardService 的前一状态。
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
+正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在卸载程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在移除 EventLog 源 readcardService。
+正在从系统中移除服务 readcardService...
+已成功地从系统中移除服务 readcardService。
+尝试停止服务 readcardService。
+正在安装程序集“D:\electron\readCard\Debug\readcardservice.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = D:\electron\readCard\Debug\readcardservice.InstallLog
+   assemblypath = D:\electron\readCard\Debug\readcardservice.exe
+正在安装服务 readcardService...
+已成功安装服务 readcardService。
+正在日志 Application 中创建 EventLog 源 readcardService...
 正在提交程序集“D:\electron\readCard\Debug\readcardservice.exe”。
 受影响的参数是:
    logtoconsole = 

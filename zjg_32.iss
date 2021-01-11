@@ -19,12 +19,12 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName=C:\{#enName}
+DefaultDirName=D:\{#enName}
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\electron\Output
-OutputBaseFilename=1.2.5
+OutputBaseFilename=bbsp
 Compression=lzma
 SolidCompression=yes
 ;DisableDirPage=yes
@@ -42,7 +42,7 @@ Source: "D:\electron\pack\jixin\jixin-win32-ia32\jixin.exe"; DestDir: "{app}"; F
 Source: "D:\electron\pack\jixin\jixin-win32-ia32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+//Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 ;NOTE: Don't use "Flags: ignoreversion" on any shared system files
@@ -112,5 +112,5 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 Filename: "{app}\static\installAndStart.bat"; Description: "Install bat"; Flags: skipifsilent
 
 [UninstallRun]
-Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard
+//Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard
 Filename: "{app}\{#enName}\remove.bat"; Flags: hidewizard

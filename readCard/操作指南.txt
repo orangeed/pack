@@ -1,0 +1,4 @@
+1.请将app.conf、config_14.xml、config_21.xml三个文件放在C:\Windows\System32\drivers\etc
+
+2.管理员执行install.bat安装服务并自动运行
+

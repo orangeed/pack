@@ -12,7 +12,7 @@ const config = {
     maximizable: true, //窗口是否可以最大化
     url: './dist/index.html', // 打包地址
     isWeb: false, // 是否是网站
-    openDevTools: true, // 是否打开开发者工具
+    openDevTools: false, // 是否打开开发者工具
 }
 
 pack(config)
