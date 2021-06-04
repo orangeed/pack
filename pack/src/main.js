@@ -1,11 +1,11 @@
 'use strict'
 const electron = require('electron')
-const path = require("path");
-const _axios = require('axios')
-const update = require('./dowload')
-const packages = require('../package.json')
-const fs = require('fs')
-const util = require("util")
+// const path = require("path");
+// const _axios = require('axios')
+// const update = require('./dowload')
+// const packages = require('../package.json')
+// const fs = require('fs')
+// const util = require("util")
 // const config = require('./config');
 // const log = require('electron-log');
 // var originalFs = require('original-fs');
@@ -35,6 +35,7 @@ const util = require("util")
  *    url:'http://www.zhihu.com' // 打包地址 string
  *    isWeb: true,// 是否是网站 boolean
  *    openDevTools: true, // 是否打开开发者工具 boolean
+ *    setFullScreen: true  //是否全屏
  */
 
 const pack = (config) => {
@@ -42,12 +43,13 @@ const pack = (config) => {
     app,
     BrowserWindow,
     Menu,
-    dialog,
+    globalShortcut
+    // dialog,
   } = electron
-  const dirPath = path.join(__dirname)
-  const dirPathO = path.join(__dirname).split('resources')
-  console.log('dirPathO', dirPathO);
-  const relativePath = dirPathO[0];
+  // const dirPath = path.join(__dirname)
+  // const dirPathO = path.join(__dirname).split('resources')
+  // console.log('dirPathO', dirPathO);
+  // const relativePath = dirPathO[0];
 
   let myWindow = null
   // 创建窗口
@@ -80,6 +82,12 @@ const pack = (config) => {
     //窗口默认最大化
     win.maximize()
     win.show()
+    // 窗口全屏
+    win.setFullScreen(config.setFullScreen);
+    //配置ESC键退出全屏
+    globalShortcut.register('ESC', () => {
+      win.setFullScreen(false);
+    })
 
     // 并且为你的应用加载index.html
     if (config.isWeb) {
@@ -136,83 +144,83 @@ const pack = (config) => {
 
 
   // 获取版本号
-  const versionPath = relativePath + '/version.txt'
-  const logoPath = relativePath + '/log.txt'
+  // const versionPath = relativePath + '/version.txt'
+  // const logoPath = relativePath + '/log.txt'
 
-  fs.readFile(versionPath, 'utf8', (err, data) => {
-    if (!err) {
-      console.log('data', data.toString());
-      up(data.toString())
-    } else {
-      console.log(err);
-      const localVersion = app.getVersion()
-      fs.writeFile(versionPath, localVersion, err => {
-        if (err) {
-          const error = util.inspect(err, {
-            depth: null
-          })
-          fs.appendFile(path, `错误信息：${error}`, (err) => {
-            if (err) throw err
-            console.log(`错误信息已经写入${path}中！`)
-          })
-        } else {
-          console.log('Version save success!');
-        }
-      })
-    }
-  })
-  // 热更新检查
-  const up = (localVersion) => {
-    _axios({
-      url: 'http://183.134.197.66:13010/zjg_3s/version',
-      method: 'get',
-      params: {
-        code: '1',
-      },
-    }).then(res => {
-      console.log('res', res.data.errorCode);
-      // const path = relativePath + '/log.txt'
-      const resStr = util.inspect(res.data, {
-        depth: null
-      })
-      const packagesStr = util.inspect(packages, {
-        depth: null
-      })
-      fs.appendFile(logoPath, `${resStr},${packagesStr}*****${dirPath},${localVersion}`, (error) => {
-        if (error) throw error
-        console.log(`成功已经写入${path}中！`)
-      })
-      if (res.data.errorCode == 0) {
-        console.log('localVersion', localVersion);
-        const onlineVersion = res.data.data.name
-        console.log('onlineVersion', onlineVersion);
+  // fs.readFile(versionPath, 'utf8', (err, data) => {
+  //   if (!err) {
+  //     console.log('data', data.toString());
+  //     up(data.toString())
+  //   } else {
+  //     console.log(err);
+  //     const localVersion = app.getVersion()
+  //     fs.writeFile(versionPath, localVersion, err => {
+  //       if (err) {
+  //         const error = util.inspect(err, {
+  //           depth: null
+  //         })
+  //         fs.appendFile(path, `错误信息：${error}`, (err) => {
+  //           if (err) throw err
+  //           console.log(`错误信息已经写入${path}中！`)
+  //         })
+  //       } else {
+  //         console.log('Version save success!');
+  //       }
+  //     })
+  //   }
+  // })
+  // // 热更新检查
+  // const up = (localVersion) => {
+  //   _axios({
+  //     url: 'http://183.134.197.66:13010/zjg_3s/version',
+  //     method: 'get',
+  //     params: {
+  //       code: '1',
+  //     },
+  //   }).then(res => {
+  //     console.log('res', res.data.errorCode);
+  //     // const path = relativePath + '/log.txt'
+  //     const resStr = util.inspect(res.data, {
+  //       depth: null
+  //     })
+  //     const packagesStr = util.inspect(packages, {
+  //       depth: null
+  //     })
+  //     fs.appendFile(logoPath, `${resStr},${packagesStr}*****${dirPath},${localVersion}`, (error) => {
+  //       if (error) throw error
+  //       console.log(`成功已经写入${path}中！`)
+  //     })
+  //     if (res.data.errorCode == 0) {
+  //       console.log('localVersion', localVersion);
+  //       const onlineVersion = res.data.data.name
+  //       console.log('onlineVersion', onlineVersion);
 
-        fs.appendFile(logoPath, `下载更新！`, (error) => {
-          if (error) throw error
-          console.log(`成功已经写入${logoPath}中！`)
-        })
-        if (localVersion < onlineVersion) {
+  //       fs.appendFile(logoPath, `下载更新！`, (error) => {
+  //         if (error) throw error
+  //         console.log(`成功已经写入${logoPath}中！`)
+  //       })
+  //       if (localVersion < onlineVersion) {
 
-          const dialogOpts = {
-            type: 'info',
-            buttons: ['立即更新', '稍后更新'],
-            title: '更新提醒',
-            message: `您有新的更新!`,
-            // detail: `内容如下：` + `${dirPathO},${packages},${localVersion},${onlineVersion}`
-            detail: `内容如下：` + `${res.data.data.attach}`
-          }
+  //         const dialogOpts = {
+  //           type: 'info',
+  //           buttons: ['立即更新', '稍后更新'],
+  //           title: '更新提醒',
+  //           message: `您有新的更新!`,
+  //           // detail: `内容如下：` + `${dirPathO},${packages},${localVersion},${onlineVersion}`
+  //           detail: `内容如下：` + `${res.data.data.attach}`
+  //         }
 
-          dialog.showMessageBox(dialogOpts).then((returnValue) => {
-            console.log('returnValue', returnValue);
-            if (returnValue.response === 0) {
+  //         dialog.showMessageBox(dialogOpts).then((returnValue) => {
+  //           console.log('returnValue', returnValue);
+  //           if (returnValue.response === 0) {
 
-              update(res.data.data.httpPath)
-            }
-          })
-        }
-      }
-    })
-  }
+  //             update(res.data.data.httpPath)
+  //           }
+  //         })
+  //       }
+  //     }
+  //   })
+  // }
 
 
   // In this file you can include the rest of your app's specific main process
