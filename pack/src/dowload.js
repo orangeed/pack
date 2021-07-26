@@ -47,44 +47,44 @@ const update = (url) => {
 }
 
 let num = 0
-// 文件重命名
+    // 文件重命名
 const reName = (name, newName, suffix) => {
     num++
     console.log('begin to rename!');
     fs.rename(relativePath + 'dowload/' + name, relativePath + 'dowload/' + newName + '.' + suffix, err => {
-        console.log('error', err);
-        if (err) {
-            if (num <= 1) {
-                console.log('rename again!');
-                reName(name, newName, suffix)
+            console.log('error', err);
+            if (err) {
+                if (num <= 1) {
+                    console.log('rename again!');
+                    reName(name, newName, suffix)
+                } else {
+                    console.log('rename failed!', err);
+                }
             } else {
-                console.log('rename failed!', err);
+                console.log('rename success!');
+                reviseVersion(name, newName, suffix)
             }
-        } else {
-            console.log('rename success!');
-            reviseVersion(name, newName, suffix)
-        }
-    })
-    // let reFileName = ''
-    // if (suffix == 'asar') {
-    //     reFileName = 'resources/'
-    // } else {
-    //     reFileName = 'static/'
-    // }
-    // fs.rename(relativePath + reFileName + name, relativePath + reFileName + newName + '.' + suffix, err => {
-    //     console.log('error', err);
-    //     if (err) {
-    //         if (num <= 1) {
-    //             console.log('rename again!');
-    //             reName(name, newName, suffix)
-    //         } else {
-    //             console.log('rename failed!', err);
-    //         }
-    //     } else {
-    //         console.log('rename success!');
-    //         reviseVersion(name)
-    //     }
-    // })
+        })
+        // let reFileName = ''
+        // if (suffix == 'asar') {
+        //     reFileName = 'resources/'
+        // } else {
+        //     reFileName = 'static/'
+        // }
+        // fs.rename(relativePath + reFileName + name, relativePath + reFileName + newName + '.' + suffix, err => {
+        //     console.log('error', err);
+        //     if (err) {
+        //         if (num <= 1) {
+        //             console.log('rename again!');
+        //             reName(name, newName, suffix)
+        //         } else {
+        //             console.log('rename failed!', err);
+        //         }
+        //     } else {
+        //         console.log('rename success!');
+        //         reviseVersion(name)
+        //     }
+        // })
 }
 
 // 调用脚本复制
@@ -122,9 +122,9 @@ const copyFile = (newName, suffix) => {
         .then(() => {
             console.log('copyFile success!');
             openProgram()
-            // reviseVersion(name)
-            // reName(name, newName, suffix)
-            // shellReName(copiedPath, resultPath, name, newName, suffix)
+                // reviseVersion(name)
+                // reName(name, newName, suffix)
+                // shellReName(copiedPath, resultPath, name, newName, suffix)
         }).catch((err) => {
             console.log('copyFile failed!');
             console.log(err);
@@ -182,16 +182,14 @@ const dowloadFile = (url) => {
                     console.log('This file is over end!');
                     if (suffix == 'asar') {
                         newName = 'app'
-
-
-                        // 复制文件
-                        // copyFile(relativePath + 'dowload/' + name, relativePath + 'resources/' + name, name, newName, suffix)
-                        // 调用脚本重命名
-                        // shellReName(relativePath + 'dowload/' + name, relativePath + 'resources/' + name, name, newName, suffix)
-                        // copyFile(relativePath + 'dowload/' + newName + '.' + suffix, relativePath + 'resources/' + newName + '.' + suffix, name)
-                        // 重命名下载的文件
+                            // 复制文件
+                            // copyFile(relativePath + 'dowload/' + name, relativePath + 'resources/' + name, name, newName, suffix)
+                            // 调用脚本重命名
+                            // shellReName(relativePath + 'dowload/' + name, relativePath + 'resources/' + name, name, newName, suffix)
+                            // copyFile(relativePath + 'dowload/' + newName + '.' + suffix, relativePath + 'resources/' + newName + '.' + suffix, name)
+                            // 重命名下载的文件
                         reName(name, newName, suffix)
-                        // w = fs.createWriteStream(relativePath + 'resources/' + name + '.' + suffix)
+                            // w = fs.createWriteStream(relativePath + 'resources/' + name + '.' + suffix)
                     } else {
                         newName = 'zjg_2d'
 
@@ -202,7 +200,7 @@ const dowloadFile = (url) => {
                         // copyFile(relativePath + 'dowload/' + newName + '.' + suffix, relativePath + 'static/' + newName + '.' + suffix, name)
                         // 重命名下载的文件
                         reName(name, newName, suffix)
-                        // w = fs.createWriteStream(relativePath + 'static/' + name + '.' + suffix)
+                            // w = fs.createWriteStream(relativePath + 'static/' + name + '.' + suffix)
                     }
                     resolve()
                 })

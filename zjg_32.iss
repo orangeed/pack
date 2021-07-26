@@ -38,13 +38,14 @@ Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.i
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\jixin.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
-Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\jixin.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\win7_readCard\*"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 ;NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
@@ -110,6 +111,7 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags:  postinstall skipifsilent
 Filename: "{app}\static\installAndStart.bat"; Description: "Install bat"; Flags: skipifsilent
+Filename: "{app}\static\win7_readCard\Debug\install.bat"; Description: "Install bat"; Flags: skipifsilent
 
 [UninstallRun]
 Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard

@@ -1,2 +1,0 @@
-管理员执行install.bat安装服务并自动运行
-管理员执行uninstall.bat卸载服务
