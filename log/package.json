@@ -1,0 +1,54 @@
+{
+  "name": "electron-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "starts": "electron start",
+    "start": "SET NODE_PROJECT=tool&& node config && electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package:tool": "SET NODE_PROJECT=tool&& node config && electron-forge package --platform win32",
+    "package:zhongtong": "SET NODE_PROJECT=zhongtong&& node config &&electron-forge package --platform win32",
+    "make": "electron-forge make --platform win32  DEBUG=electron-forge:*,electron-windows-installer:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-wix": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "dayjs": "^1.9.7",
+    "electron-log": "^4.3.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "zhongtong.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "legalCopyright": "dasd",
+            "authors": "dsad",
+            "description": "dasdas"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-wix",
+          "config": {
+            "language": 1033,
+            "manufacturer": "My Awesome Company"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Title>电子旅行证件---电子往来港澳通行证（双程证）系统配置</Title>
+  <!--访问控制方式-->
+  <Access_Mode>
+    <Read value="7"/>
+    <Write value="6"/>
+  </Access_Mode>
+  <!--加密机端密钥号/标识-->
+  <Key_ID>
+    <!--序列号保护密钥0x0E-->
+    <MACHINE_SEARIAL_KEY value="14"/>
+    <!--0x8F-->
+    <MACHINE_SYSTEM_KEY value="143"/>
+    <!--0x80-->
+    <MACHINE_MF_CONTROL_KEY value="128"/>
+    <!--0x81-->
+    <MACHINE_MF_MAINTAIN_KEY value="129"/>
+    <!--0xA0-->
+    <MACHINE_DF_C_CONTROL_KEY value="160"/>
+    <!--0xA1-->
+    <MACHINE_DF_C_MAINTAIN_KEY value="161"/>
+    <!--0x25-->
+    <MACHINE_DF_C_FAC_ENC value="37"/>
+    <!--0x3A-->
+    <MACHINE_DF_C_BAC_CN_ENC value="58"/>
+    <!--0x39-->
+    <MACHINE_DF_C_BAC_CN_MAC value="57"/>
+    <!--0x2E-->
+    <MACHINE_DF_C_VISA value="46"/>
+    <!--0x2D-->
+    <MACHINE_DF_C_TR value="45"/>
+    <!--0x31-->
+    <MACHINE_DF_C_REDRAW value="49"/>
+    <!--0x3E-->
+    <MACHINE_DF_C_EF_TERMINATE value="62"/>
+    <!--0x3D-->
+    <MACHINE_DF_C_BAC_ICAO_MANAGE value="61"/>
+    <!--0xC0-->
+    <MACHINE_DF_ML_CONTROL_KEY value="192"/>
+    <!--0xC1-->
+    <MACHINE_DF_ML_MAINTAIN_KEY value="193"/>
+    <!--0x45-->
+    <MACHINE_DF_ML_FAC_ENC value="69"/>
+    <!--0x5A-->
+    <MACHINE_DF_ML_BAC_CN_ENC value="90"/>
+    <!--0x59-->
+    <MACHINE_DF_ML_BAC_CN_MAC value="89"/>
+    <!--0x5E-->
+    <MACHINE_DF_ML_EF_TERMINATE value="94"/>
+    <!--0xD0-->
+    <MACHINE_DF_HK_CONTROL_KEY value="208"/>
+    <!--0xD1-->
+    <MACHINE_DF_HK_MAINTAIN_KEY value="209"/>
+    <!--0x65-->
+    <MACHINE_DF_HK_FAC_ENC value="101"/>
+    <!--0x7A-->
+    <MACHINE_DF_HK_BAC_CN_ENC value="122"/>
+    <!--0x79-->
+    <MACHINE_DF_HK_BAC_CN_MAC value="121"/>
+    <!--0x7E-->
+    <MACHINE_DF_HK_EF_TERMINATE value="126"/>
+    <!--0x7D-->
+    <MACHINE_DF_HK_BAC_ICAO_MANAGE value="125"/>
+    <!--0xE0-->
+    <MACHINE_DF_MO_CONTROL_KEY value="224"/>
+    <!--0xE1-->
+    <MACHINE_DF_MO_MAINTAIN_KEY value="225"/>
+    <!--0x05-->
+    <MACHINE_DF_MO_FAC_ENC value="5"/>
+    <!--0x1A-->
+    <MACHINE_DF_MO_BAC_CN_ENC value="26"/>
+    <!--0x19-->
+    <MACHINE_DF_MO_BAC_CN_MAC value="25"/>
+    <!--0x1E-->
+    <MACHINE_DF_MO_EF_TERMINATE value="30"/>
+    <!--0x1D-->
+    <MACHINE_DF_MO_BAC_ICAO_MANAGE value="29"/>
+    <!--0x72-->
+    <MACHINE_MF_DT_WRITE value="114"/>
+    <!--0x30-->
+    <MACHINE_DF_C_AV_WRITE value="48"/>
+    <!--0x32-->
+    <MACHINE_DF_C_COM_WRITE value="50"/>
+    <!--0x33-->
+    <MACHINE_DF_C_KBC_READ value="51"/>
+    <!--0x34-->
+    <MACHINE_DF_C_KBC_WRITE value="52"/>
+    <!--0x35-->
+    <MACHINE_DF_C_TRMLH_WRITE value="53"/>
+    <!--0x36-->
+    <MACHINE_DF_C_TRMLM_WRITE value="54"/>
+    <!--0x37-->
+    <MACHINE_DF_C_TRHK_WRITE value="55"/>
+    <!--0x38-->
+    <MACHINE_DF_C_TRMO_WRITE value="56"/>
+    <!--0x3B-->
+    <MACHINE_DF_C_TRAV_MAC value="59"/>
+    <!--0x52-->
+    <MACHINE_DF_ML_COM_WRITE value="82"/>
+    <!--0x53-->
+    <MACHINE_DF_ML_KMLBC_READ value="83"/>
+    <!--0x54-->
+    <MACHINE_DF_ML_KMLP_WRITE value="84"/>
+    <!--0x73-->
+    <MACHINE_DF_HK_HK_I_READ value="115"/>
+    <!--0x74-->
+    <MACHINE_DF_HK_HK_II_READ value="116"/>
+    <!--0x75-->
+    <MACHINE_DF_HK_HK_III_READ value="117"/>
+    <!--0x76-->
+    <MACHINE_DF_HK_HK_I_WRITE value="118"/>
+    <!--0x77-->
+    <MACHINE_DF_HK_HK_II_WRITE value="119"/>
+    <!--0x78-->
+    <MACHINE_DF_HK_HK_III_WRITE value="120"/>
+    <!--0x13-->
+    <MACHINE_DF_MO_MO_I_READ value="19"/>
+    <!--0x14-->
+    <MACHINE_DF_MO_MO_II_READ value="20"/>
+    <!--0x15-->
+    <MACHINE_DF_MO_MO_III_READ value="21"/>
+    <!--0x16-->
+    <MACHINE_DF_MO_MO_I_WRITE value="22"/>
+    <!--0x17-->
+    <MACHINE_DF_MO_MO_II_WRITE value="23"/>
+    <!--0x18-->
+    <MACHINE_DF_MO_MO_III_WRITE value="24"/>
+  </Key_ID>
+  <!--密钥尝试次数-->
+  <Key_Retry_Number>
+    <MACHINE_SEARIAL_KEY value="7"/>
+    <MACHINE_SYSTEM_KEY value="129"/>
+    <MACHINE_MF_CONTROL_KEY value="129"/>
+    <MACHINE_MF_MAINTAIN_KEY value="129"/>
+    <MACHINE_DF_C_CONTROL_KEY value="129"/>
+    <MACHINE_DF_C_MAINTAIN_KEY value="129"/>
+    <MACHINE_DF_C_FAC_ENC value="129"/>
+    <MACHINE_DF_C_BAC_CN_ENC value="129"/>
+    <MACHINE_DF_C_BAC_CN_MAC value="129"/>
+    <MACHINE_DF_C_VISA value="129"/>
+    <MACHINE_DF_C_TR value="129"/>
+    <MACHINE_DF_C_REDRAW value="129"/>
+    <MACHINE_DF_C_EF_TERMINATE value="129"/>
+    <MACHINE_DF_C_BAC_ICAO_MANAGE value="129"/>
+    <MACHINE_DF_ML_CONTROL_KEY value="129"/>
+    <MACHINE_DF_ML_MAINTAIN_KEY value="129"/>
+    <MACHINE_DF_ML_FAC_ENC value="129"/>
+    <MACHINE_DF_ML_BAC_CN_ENC value="129"/>
+    <MACHINE_DF_ML_BAC_CN_MAC value="129"/>
+    <MACHINE_DF_ML_EF_TERMINATE value="129"/>
+    <MACHINE_DF_HK_CONTROL_KEY value="129"/>
+    <MACHINE_DF_HK_MAINTAIN_KEY value="129"/>
+    <MACHINE_DF_HK_FAC_ENC value="129"/>
+    <MACHINE_DF_HK_BAC_CN_ENC value="129"/>
+    <MACHINE_DF_HK_BAC_CN_MAC value="129"/>
+    <MACHINE_DF_HK_EF_TERMINATE value="129"/>
+    <MACHINE_DF_HK_BAC_ICAO_MANAGE value="129"/>
+    <MACHINE_DF_MO_CONTROL_KEY value="129"/>
+    <MACHINE_DF_MO_MAINTAIN_KEY value="129"/>
+    <MACHINE_DF_MO_FAC_ENC value="129"/>
+    <MACHINE_DF_MO_BAC_CN_ENC value="129"/>
+    <MACHINE_DF_MO_BAC_CN_MAC value="129"/>
+    <MACHINE_DF_MO_EF_TERMINATE value="129"/>
+    <MACHINE_DF_MO_BAC_ICAO_MANAGE value="129"/>
+    <MACHINE_MF_DT_WRITE value="129"/>
+    <MACHINE_DF_C_AV_WRITE value="129"/>
+    <MACHINE_DF_C_COM_WRITE value="129"/>
+    <MACHINE_DF_C_KBC_READ value="129"/>
+    <MACHINE_DF_C_KBC_WRITE value="129"/>
+    <MACHINE_DF_C_TRML_WRITE value="129"/>
+    <MACHINE_DF_C_TRHK_WRITE value="129"/>
+    <MACHINE_DF_C_TRMO_WRITE value="129"/>
+    <MACHINE_DF_C_TRAV_MAC value="129"/>
+    <MACHINE_DF_ML_COM_WRITE value="7"/>
+    <MACHINE_DF_ML_KMLBC_READ value="7"/>
+    <MACHINE_DF_ML_KMLP_WRITE value="7"/>
+    <MACHINE_DF_HK_HK_I_READ value="129"/>
+    <MACHINE_DF_HK_HK_II_READ value="129"/>
+    <MACHINE_DF_HK_HK_III_READ value="129"/>
+    <MACHINE_DF_HK_HK_I_WRITE value="129"/>
+    <MACHINE_DF_HK_HK_II_WRITE value="129"/>
+    <MACHINE_DF_HK_HK_III_WRITE value="129"/>
+    <MACHINE_DF_MO_MO_I_READ value="129"/>
+    <MACHINE_DF_MO_MO_II_READ value="129"/>
+    <MACHINE_DF_MO_MO_III_READ value="129"/>
+    <MACHINE_DF_MO_MO_I_WRITE value="129"/>
+    <MACHINE_DF_MO_MO_II_WRITE value="129"/>
+    <MACHINE_DF_MO_MO_III_WRITE value="129"/>
+  </Key_Retry_Number>
+</root>

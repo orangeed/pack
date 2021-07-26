@@ -19,12 +19,12 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName=C:\{#enName}
+DefaultDirName=D:\{#enName}
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\electron\Output
-OutputBaseFilename=1.2.5
+OutputBaseFilename=bbsp
 Compression=lzma
 SolidCompression=yes
 ;DisableDirPage=yes
@@ -38,6 +38,7 @@ Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.i
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
+<<<<<<< HEAD
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\jixin.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
@@ -46,6 +47,15 @@ Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
 Source: "D:\before\pack\pack\jixin\jixin-win32-ia32\static\win7_readCard\*"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+=======
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\jixin.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\installAndStart.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\remove.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+//Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\copy.bat"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\zjg_2d.exe"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+Source: "D:\electron\pack\jixin\jixin-win32-ia32\static\app.ini"; DestDir: "{app}\{#enName}"; Flags: sharedfile uninsneveruninstall
+>>>>>>> cb53d7f80b222ae3c6c47ad5cc4f5b1a5a348f08
 ;NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
@@ -114,5 +124,5 @@ Filename: "{app}\static\installAndStart.bat"; Description: "Install bat"; Flags:
 Filename: "{app}\static\win7_readCard\Debug\install.bat"; Description: "Install bat"; Flags: skipifsilent
 
 [UninstallRun]
-Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard
+//Filename: "{app}\{#enName}\copy.bat"; Flags: hidewizard
 Filename: "{app}\{#enName}\remove.bat"; Flags: hidewizard

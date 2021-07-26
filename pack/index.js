@@ -10,9 +10,11 @@ const config = {
     center: true, // 窗口是否在中心
     minimizable: true, //窗口是否可以最小化
     maximizable: true, //窗口是否可以最大化
+    // url:'https://www.zhihu.com',
     url: './dist/index.html', // 打包地址
     isWeb: false, // 是否是网站
-    openDevTools: true, // 是否打开开发者工具
+    openDevTools: false, // 是否打开开发者工具
+    setFullScreen: true, // 是否全屏
 }
 
 pack(config)

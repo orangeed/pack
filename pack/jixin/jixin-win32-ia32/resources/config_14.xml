@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Title>电子旅行证件---电子护照初始化配置</Title>
+  <!--访问控制方式-->
+  <Access_Mode>
+    <Read value="7"/>
+    <Write value="6"/>
+  </Access_Mode>
+  <!--加密机端密钥号/标识-->
+  <Key_ID>
+    <!--序列号保护密钥0x0E-->
+    <MACHINE_SEARIAL_KEY value="14"/>
+    <!--0x8F-->
+    <MACHINE_SYSTEM_KEY value="143"/>
+    <!--0x80-->
+    <MACHINE_MF_CONTROL_KEY value="128"/>
+    <!--0x81-->
+    <MACHINE_MF_MAINTAIN_KEY value="129"/>
+    <!--0xA0-->
+    <MACHINE_DF_ONE_CONTROL_KEY value="160"/>
+    <!--0xA1-->
+    <MACHINE_DF_ONE_MAINTAIN_KEY value="161"/>
+    <!--0x25-->
+    <MACHINE_DF_ONE_FAC_ENC value="37"/>
+    <!--0x3A-->
+    <MACHINE_DF_ONE_BAC_CN_ENC value="58"/>
+    <!--0x39-->
+    <MACHINE_DF_ONE_BAC_CN_MAC value="57"/>
+    <!--0x3E-->
+    <MACHINE_DF_ONE_EF_TERMINATE value="62"/>
+    <!--0x3D-->
+    <MACHINE_DF_ONE_BAC_ICAO_MANAGE value="61"/>
+    <!--0xC0-->
+    <MACHINE_DF_TWO_CONTROL_KEY value="192"/>
+    <!--0xC1-->
+    <MACHINE_DF_TWO_MAINTAIN_KEY value="193"/>
+    <!--0x45-->
+    <MACHINE_DF_TWO_FAC_ENC value="69"/>
+    <!--0x4A-->
+    <MACHINE_DF_TWO_BAC_CN_ENC value="74"/>
+    <!--0x49-->
+    <MACHINE_DF_TWO_BAC_CN_MAC value="73"/>
+    <!--0x5E-->
+    <MACHINE_DF_TWO_EF_TERMINATE value="94"/>
+    <!--0x31-->
+    <MACHINE_MF_DT_WIRTE value="49"/>
+    <!--0x32-->
+    <MACHINE_DF_ONE_COM_WIRTE value="50"/>
+    <!--0x33-->
+    <MACHINE_DF_ONE_KBC_READ value="51"/>
+    <!--0x34-->
+    <MACHINE_DF_ONE_KBC_WIRTE value="52"/>
+    <!--0x52-->
+    <MACHINE_DF_TWO_COM_WIRTE value="82"/>
+    <!--0x53-->
+    <MACHINE_DF_TWO_KMLBC_READ value="83"/>
+    <!--0x54-->
+    <MACHINE_DF_TWO_KMLP_WIRTE value="84"/>
+    <!--0x55-->
+    <MACHINE_DF_TWO_KPMR_READ value="85"/>
+    <!--0x56-->
+    <MACHINE_DF_TWO_KTR_WRITE value="86"/>
+    <!--0x57-->
+    <MACHINE_DF_TWO_KTRM_MAC value="87"/>
+    <!--0x5B-->
+    <MACHINE_DF_TWO_DN_READ value="91"/>
+    <!--0x5C-->
+    <MACHINE_DF_TWO_DN_WIRTE value="92"/>
+  </Key_ID>
+  <!--密钥尝试次数-->
+  <Key_Retry_Number>
+    <MACHINE_SEARIAL_KEY value="7"/>
+    <MACHINE_SYSTEM_KEY value="7"/>
+    <MACHINE_MF_CONTROL_KEY value="7"/>
+    <MACHINE_MF_MAINTAIN_KEY value="7"/>
+    <MACHINE_DF_ONE_CONTROL_KEY value="7"/>
+    <MACHINE_DF_ONE_MAINTAIN_KEY value="7"/>
+    <MACHINE_DF_ONE_FAC_ENC value="7"/>
+    <MACHINE_DF_ONE_BAC_CN_ENC value="7"/>
+    <MACHINE_DF_ONE_BAC_CN_MAC value="7"/>
+    <MACHINE_DF_ONE_EF_TERMINATE value="7"/>
+    <MACHINE_DF_ONE_BAC_ICAO_MANAGE value="7"/>
+    <MACHINE_DF_TWO_CONTROL_KEY value="7"/>
+    <MACHINE_DF_TWO_MAINTAIN_KEY value="7"/>
+    <MACHINE_DF_TWO_FAC_ENC value="7"/>
+    <MACHINE_DF_TWO_BAC_CN_ENC value="7"/>
+    <MACHINE_DF_TWO_BAC_CN_MAC value="7"/>
+    <MACHINE_DF_TWO_EF_TERMINATE value="7"/>
+    <MACHINE_MF_DT_WIRTE value="7"/>
+    <MACHINE_DF_ONE_COM_WIRTE value="7"/>
+    <MACHINE_DF_ONE_KBC_READ value="7"/>
+    <MACHINE_DF_ONE_KBC_WIRTE value="7"/>
+    <MACHINE_DF_TWO_COM_WIRTE value="7"/>
+    <MACHINE_DF_TWO_KMLBC_READ value="7"/>
+    <MACHINE_DF_TWO_KMLP_WIRTE value="7"/>
+    <MACHINE_DF_TWO_KPMR_READ value="7"/>
+    <MACHINE_DF_TWO_KTR_WRITE value="7"/>
+    <MACHINE_DF_TWO_KTRM_MAC value="7"/>
+    <MACHINE_DF_TWO_DN_READ value="7"/>
+    <MACHINE_DF_TWO_DN_WIRTE value="7"/>
+    <MACHINE_DF_ONE_BAC_ICAO_ENC value="不限次数"/>
+    <MACHINE_DF_ONE_BAC_ICAO_MAC value="不限次数"/>
+  </Key_Retry_Number>
+</root>

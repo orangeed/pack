@@ -1,0 +1,1 @@
+etc 文件夹中的配置文件放置于 Windows\System32\drivers\etc 下，其他文件夹放在 readcert.exe 同目录下

@@ -53,7 +53,7 @@ node index.js
 | center         | Boolean |                         true 窗口是否在中心 |
 | minimizable    | Boolean |                      true 窗口是否可以最小化 |
 | maximizable    | Boolean |                      true 窗口是否可以最大化 |
-| url            |  String |           https://www.orangecj.cn 打包地址 |
+| url            |  String |           https://orangecj.cn 打包地址 |
 | isWeb          | Boolean |                            true 是否是网站 |
 | openDevTools   | Boolean |                      true 是否打开开发者工具 |
 
@@ -68,3 +68,4 @@ node index.js
 1. 修改了引用错误路径
 2. 修改了使用说明
 3. 添加了bat文件
+

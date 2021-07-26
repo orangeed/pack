@@ -18,12 +18,10 @@
     ],
     "author": "orange",
     "license": "MIT",
-    "publish": [
-        {
-            "provider": "generic",
-            "url": ""
-        }
-    ],
+    "publish": [{
+        "provider": "generic",
+        "url": ""
+    }],
     "devDependencies": {},
     "dependencies": {
         "asar": "^3.0.3",
