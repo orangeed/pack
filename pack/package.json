@@ -26,7 +26,7 @@
     "dependencies": {
         "asar": "^3.0.3",
         "axios": "^0.21.0",
-        "electron": "9.2.1",
+        "electron": "18.3.7",
         "electron-packager": "^14.2.1",
         "electron-updater": "^4.3.5",
         "update-electron-app": "^2.0.1"
